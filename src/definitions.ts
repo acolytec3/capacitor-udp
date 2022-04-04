@@ -73,7 +73,7 @@ export interface UDPPlugin {
 
   addListener(
     events: 'receive',
-    functions: (params: { socketId: number; buffer: string }) => void,
+    functions: (params: { socketId: number; buffer: string, remoteAddress: string, remotePort: number }) => void,
   ): PluginListenerHandle;
 
   addListener(
